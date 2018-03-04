@@ -20,17 +20,33 @@ namespace Ogmo {
 			*/
 			string levelFolder = "Levels";
 
-			Object[] levels = Resources.LoadAll(levelFolder + "/GeneratedAssets", typeof(TextAsset));
-			TextAsset[] textLevels = new TextAsset[levels.Length];
-			for(int ii = 0; ii < levels.Length; ii++) {
-				textLevels[ii] = (TextAsset)levels[ii];
-			}
+			// Object[] levels = 
+			TextAsset[] textLevels = Resources.LoadAll<TextAsset>("Levels/GeneratedAssets"); //new TextAsset[levels.Length];
+			// for(int ii = 0; ii < levels.Length; ii++) {
+			// 	textLevels[ii] = (TextAsset)levels[ii];
+			// }
+
+			// Debug.Log(textLevels.Length);
 			List<OgmoLevel> levelList = new List<OgmoLevel>();
 			for (int ii = 0; ii < textLevels.Length; ii++) {	
 				levelList.Add(new OgmoLevel(textLevels[ii]));
 			}
 
+			// foreach(OgmoLevel level in levelList){
+				
+			// }
+
+			// Debug.Log(levelList.ToString());
+		
+			OgmoLevel firstLevel = levelList[0];
+
+			OgmoLayer Ground = firstLevel.layers["Ground"];
+
+			Debug.Log(Ground.tiles[0,0]);
+			                                            
+
 		}
+
 		
 		// Update is called once per frame
 		void Update () {

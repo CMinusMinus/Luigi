@@ -11,7 +11,7 @@ namespace Ogmo {
             {
                 if (asset.EndsWith(".oel"))
                 {
-                    string filePath = asset.Substring(0, asset.Length - Path.GetFileName(asset).Length) + "Generated Assets/";
+                    string filePath = asset.Substring(0, asset.Length - Path.GetFileName(asset).Length) + "GeneratedAssets/";
                     string newFileName = filePath + Path.GetFileNameWithoutExtension(asset) + ".txt";
     
                     if (!Directory.Exists(filePath))

@@ -58,7 +58,7 @@ namespace Ogmo {
 			tiles = new int[textLines[0].Length,textLines.Length];
 			for (int ii = 0; ii < tiles.GetLength(0); ii++){
 				for (int jj = 0; jj < tiles.GetLength(1); jj++){
-					tiles[ii,jj] = System.Convert.ToInt32(textLines[jj][ii]);
+					tiles[ii,jj] = System.Convert.ToInt32(textLines[jj][ii]) == 48 ? 0 : 1;
 				}
 			}
 			tileWidth = width/tiles.GetLength(0);

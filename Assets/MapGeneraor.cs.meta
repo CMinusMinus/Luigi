@@ -7,6 +7,8 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - square: {fileID: 1632771442609782, guid: 643fa72288cf7fd47b807dac3ea46966, type: 2}
+  - kill: {fileID: 100000, guid: a038b284634e29f4aaf058814aa61a6f, type: 2}
+  - player: {fileID: 1504689825491550, guid: bc6d4665d16221341a66cf3e4b817630, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

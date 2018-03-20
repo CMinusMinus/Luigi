@@ -13,8 +13,8 @@
     <Height>960</Height>
   </LevelMinimumSize>
   <LevelMaximumSize>
-    <Width>1280</Width>
-    <Height>960</Height>
+    <Width>5120</Width>
+    <Height>3180</Height>
   </LevelMaximumSize>
   <Filename>C:\Users\g\Documents\Documents\RevolutionUC\Luigi\Assets\Resources\Levels\Luigi.oep</Filename>
   <AngleMode>Radians</AngleMode>
@@ -24,7 +24,10 @@
     <Height>480</Height>
   </CameraSize>
   <ExportCameraPosition>false</ExportCameraPosition>
-  <LevelValueDefinitions />
+  <LevelValueDefinitions>
+    <ValueDefinition xsi:type="IntValueDefinition" Name="test" Default="0" Min="0" Max="100" ShowSlider="false" />
+    <ValueDefinition xsi:type="IntValueDefinition" Name="NewValue0" Default="0" Min="0" Max="100" ShowSlider="false" />
+  </LevelValueDefinitions>
   <LayerDefinitions>
     <LayerDefinition xsi:type="GridLayerDefinition">
       <Name>Hazards</Name>

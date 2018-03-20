@@ -10,8 +10,6 @@ public class PlayerController : MonoBehaviour {
     public float jumpForce = 800f;
     public Transform groundCheckLeft;
 	public Transform groundCheckRight;
-	public Transform wallCheckLeft;
-	public Transform wallCheckRight;
 
 
     private bool grounded = false;
@@ -21,20 +19,15 @@ public class PlayerController : MonoBehaviour {
 
 
     // Use this for initialization
-    void Awake () 
-    {
+    void Awake () {
         anim = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
     }
     
     // Update is called once per frame
-    void Update () 
-    {
+    void Update () {
         grounded = Physics2D.Linecast(transform.position, groundCheckRight.position, 1 << LayerMask.NameToLayer("Ground"))
 					|| Physics2D.Linecast(transform.position, groundCheckLeft.position, 1 << LayerMask.NameToLayer("Ground"));
-
-		walled = Physics2D.Linecast(transform.position, wallCheckRight.position, 1 << LayerMask.NameToLayer("Ground"))
-					|| Physics2D.Linecast(transform.position, wallCheckLeft.position, 1 << LayerMask.NameToLayer("Ground"));
 
         if (Input.GetButtonDown("Jump") && grounded)
         {
@@ -42,8 +35,7 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    void FixedUpdate()
-    {
+    void FixedUpdate() {
         float h = Input.GetAxis("Horizontal");
 
         anim.SetFloat("Speed", Mathf.Abs(h));

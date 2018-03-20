@@ -60,7 +60,7 @@ namespace Ogmo {
 			foreach (OgmoEntity entity in Entities.entities)
 			{
 				Debug.Log(entity.x + " , " + entity.y);
-				Instantiate(player, new Vector3(entity.x/32,entity.y/32,0),Quaternion.identity);
+				Instantiate(player, new Vector2(entity.x/32,entity.y/32),Quaternion.identity);
 			}
 
 			                                            
